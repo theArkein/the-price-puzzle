@@ -17,8 +17,8 @@ function GuestSpeaker() {
         <div></div>
         <Image
           src={GuessTheGuest}
-          width={"520"}
-          height={"520"}
+          width={"320"}
+          height={"320"}
           alt="event-banner"
           className="m-auto"
         />
