@@ -33,7 +33,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <head>
+          <link
+            href="https://fonts.cdnfonts.com/css/hitch-hike?styles=90559"
+            rel="stylesheet"
+          />
+        </head>
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",

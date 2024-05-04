@@ -2,6 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 import {
   NavigationMenu,
@@ -16,8 +17,12 @@ import {
 function Navigation() {
   const menuItems = [
     {
-      path: "/about-event",
-      label: "About Event",
+      path: "/",
+      label: "Home",
+    },
+    {
+      path: "/info",
+      label: "Event Info",
     },
     {
       path: "/guest-speaker",
@@ -28,15 +33,17 @@ function Navigation() {
       label: "Event Game",
     },
     {
-      path: "/organizer",
-      label: "Organizers",
+      path: "/organizing-team",
+      label: "Organizing Team",
     },
   ]
+  const activePath = usePathname()
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
         {menuItems.map((menu) => (
-          <NavigationMenuItem>
+          <NavigationMenuItem key={menu.path}>
             <Link href={menu.path} legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 {menu.label}
